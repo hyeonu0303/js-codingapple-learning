@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <!--부트스트랩 css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!--main.css 연결-->
+  <link href="main.css" rel="stylesheet">
+  
+  
+  <!--jQuery라이브러리-->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="black-bg ">
+    <div class="white-bg">
+      <h4>로그인하세요</h4>
+      <button class="btn btn-danger" id="close">닫기</button>
+    </div>
+  </div>
+  
+
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand">Navbar</span>
+      <button class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+  
+  <button class="login">로그인</button>
+  
+  <script>
+    //1. 모달창 버튼만들기, 2. 버튼누르면 열리기 3.모달창 닫기누르면 닫힘
+    /*document.querySelector('.login').addEventListener('click', function(){
+    document.querySelector('.black-bg').classList.add('show-modal');
+    })*/
+    
+    $('.login').on('click', function(){
+      $('.black-bg').show();
+    })
+    
+    
+    //모달창 닫기동작
+    /*document.querySelector('#close').addEventListener('click', function(){
+      document.querySelector('.black-bg').classList.add('hide');
+    })*/
+    
+    $('#close').on('click', function(){
+      $('.black-bg').hide();
+    })
+  </script>
+  
+  
+
+  <!--1. 미리서브메뉴를 html css로 디자인 후 버튼누르면 보여달라고 JS짬 class 탈부착으로도 구현가능 
+  class 부착식으로 개발하면 에니메이션 추가 쉬움, 재사용 편리
+  -->
+  <ul class="list-group">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>
+  
+  
+  <div class="main-bg">
+    <h4>Shirts on Sale</h4>
+    <button id="login" class="btn btn-danger">로그인</button>
+  </div>
+  
+  
+  
+  
+  
+  <script>
+    
+    
+    
+    
+    document.querySelector('.navbar-toggler').addEventListener('click', function() {
+      document.querySelectorAll('.list-group')[0].classList.toggle('show');
+    })
+    
+  </script>
+
+  <!--bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+  </script>
+</body>
+</html>
