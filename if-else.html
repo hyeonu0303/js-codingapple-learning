@@ -33,8 +33,10 @@
         <!--전송은 submit 닫기는 button 해줘야 에러가없음-->
         <button type="button" class="btn btn-danger" id="close">닫기</button>
       </form>
+      
     </div>
   </div>
+
   <script>
     /* 
     //전송버튼 누르면 알림창띄우기
@@ -63,17 +65,14 @@
         alert('비밀번호를 입력해주세요');
         e.preventDefault();
       }
-      //비번이 6자미만이면 더 길게 입력하라고 안내문 띄우기
       else if($('#pwd').val().length >= 6){
         alert('비밀번호 6자리미만으로 입력해주세요');
         e.preventDefault();
       }
     })
-    document.getElementById('id').addEventListener('change', function(){
-      console.log('안녕');
-    })
+    
+    //비번이 6자미만이면 더 길게 입력하라고 안내문 띄우기
   </script>
-
   <!--nav 바-->
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
