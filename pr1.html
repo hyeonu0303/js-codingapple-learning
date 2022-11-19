@@ -17,7 +17,7 @@
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="dark">
   <!--모달창-->
   <div class="black-bg ">
     <div class="white-bg">
@@ -75,14 +75,37 @@
   </script>
 
   <!--nav 바-->
-  <nav class="navbar navbar-light bg-light">
+  <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
-      <span class="navbar-brand">Navbar</span>
+      <span class="navbar-brand" class="text">Navbar</span>
+      <span class="badge bg-dark">Dark 🔄</span>
       <button class="navbar-toggler" type="button">
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
   </nav>
+
+  <script>
+    
+    var count = 0;
+    $('.badge').on('click', function(){
+      count++;
+      if(count % 2 == 1){
+        //내부글자 Light
+        $('.badge').html('Light 🔄');
+      }
+      else{
+        //내부글자 dark
+        $('.badge').html('Dark 🔄');
+      }
+    })
+    
+
+    //badge 1(홀수면)회 클릭시 내부 글자를 Light로 변경
+    //badge 2(짝수면)회 클릭시 내부 글자를 Dark로 변경
+    //몇번 눌렀나 기록해야할듯
+    
+  </script>
 
   <!--1. 미리서브메뉴를 html css로 디자인 후 버튼누르면 보여달라고 JS짬 class 탈부착으로도 구현가능 
   class 부착식으로 개발하면 에니메이션 추가 쉬움, 재사용 편리
@@ -106,7 +129,7 @@
 
   <!--로그인 버튼-->
   <div class="main-bg">
-    <h4>Shirts on Sale</h4>
+    <h4 class="text">Shirts on Sale</h4>
 
     <button id="login" class="btn btn-danger">로그인</button>
   </div>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이자율계산 </title>
+</head>
+<body>
+  <script>
+    var 예금액 = 10000;
+    
+    var 미래예금액 = 0;
+    var year = 2;
+    //여기에 코드짜보십시오 
+    /*첫 예금액이 5만원 미만이면 이율이 연 15퍼센트,
+
+    첫 예금액이 5만원 이상이면 이율이 연 20퍼센트라고 합니다.*/
+    if(예금액 < 50000){
+      미래예금액 = 예금액 + (0.15 * 예금액) * year;
+    }
+    else{
+      미래예금액 = 예금액 + (0.20 * 예금액) * year;
+    }
+    console.log(미래예금액)
+  </script>
+</body>
+</html>

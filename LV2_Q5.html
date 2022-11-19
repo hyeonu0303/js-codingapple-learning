@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퀴즈UI</title>
+</head>
+<body>
+  <p>태조 이성계가 태어난 년도는?</p>
+  <input type="text" id="answer">
+  <button id="send-answer">제출</button>
+  <script>
+    //버튼을 누르면 1335와 같아야함
+    document.getElementById('send-answer').addEventListener('click',function(){
+      if(document.querySelector('#answer').value == 1335){
+        alert('성공');
+      }
+      else{
+        alert('멍청아');
+      }
+    });
+    //버튼을 누르면 alert창 떠야함
+  </script>
+</body>
+</html>
