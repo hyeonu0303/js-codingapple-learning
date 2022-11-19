@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function 합격(개론,민법){
+      //과목마다 100점 만점이지만
+      if (개론 > 100 || 민법 > 100){
+        alert('장난치지마세요');
+      }
+
+      if(개론 < 40 || 민법 < 40){
+        console.log('불합격');
+      }
+      //두 과목 합해서 120점 이상이면 합격
+      else if(개론 + 민법 >= 120){
+        console.log('합격');
+      }
+      else{
+        console.log('불합격');
+      }
+      //한 과목이 40점 미만이면 과락으로 불합격됩니다. 
+    }
+    합격(1000, 50);
+    합격(70, 70);
+    합격(30, 100);
+    합격(50, 50);
+  </script>
+
+</body>
+</html>
