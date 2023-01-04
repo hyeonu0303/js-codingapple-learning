@@ -15,6 +15,7 @@
   <link href="css/main2.css" rel="stylesheet">
 </head>
 <body>
+  
   <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
       <span class="navbar-brand" class="text">Navbar</span>
@@ -22,33 +23,76 @@
       <button class="navbar-toggler" type="button">
         <span class="navbar-toggler-icon"></span>
       </button>
+      
+      <div id="widthbar"></div>
     </div>
   </nav>
-  <div style="height:150px;"></div>
-  <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at, laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, eligendi quae consectetur praesentium exercitationem.
-  </div> 
-  <div style="height: 1000px"></div>
-
+  
+  
+  
+  <div style="height: 2000px"></div>
+  
   <script>
-    /* window.addEventListener('scroll',function(){
-      console.log(window.scrollX);
-    }) */
+    $('.lorem').on('scroll',function(){
+      var 높이 = document.querySelector('.lorem').clientHeight;//현재보이는높이
+      var 스크롤양 = document.querySelector('.lorem').scrollTop;//끝까지 스크롤체크
+      var 실제높이 = document.querySelector('.lorem').scrollHeight;
+      
+        alert('스크롤했냐');
+    });
+
+
+    
+    window.addEventListener('scroll',function(){
+    console.log(window.scrollY);
+    })
+    
+
+
     //문제1 스크롤바 100px내리면 로고 폰트사이즈 작게만들기
     $(window).on('scroll',function(){
       if(window.screenY > 10){
         $('.navbar-brand').css('font-size','20px');
       }
     });
-    //폰트사이즈 작게
-    $('.lorem').on('scroll',function(){
-      var 스크롤양 = document.querySelector('.lorem').scrollTop;
-      var 실제높이 = document.querySelector('.lorem').scrollHeight;
-      console.log(스크롤양, 실제높이);
-    })
   </script>
+    <!---------------------------------------------------->
+    <script>
+    /*
+    페이지를 1% 읽으면 div 박스 길이는 1%
 
+    페이지를 50%정도 읽으면 div 박스 길이는 50% 
 
+    페이지 다 읽으면 div 박스 길이는 100%   
+    */
+  
+    $(window).on('scroll',function(){
+      let 스크롤양 = document.querySelector('html').scrollTop;
+      let 실제높이 = document.querySelector('html').scrollHeight;
+      let 높이 = document.querySelector('html').clientHeight;
+      
+      
+      //내리는양이 증가할수록
+      if(스크롤양 == 0){
+        $('#widthbar').css('width','1%');
+      }
+      else if(스크롤양 == 400){
+        $('#widthbar').css('width','50%');
+      }
+      
+      else if(스크롤양 == 1200){
+        $('#widthbar').css('width','100%');
+      }
+    });
+    
+    
+    
+    
+    
+
+    //회원약관 박스 거의 끝까지 스크롤하면 alert 띄우기
+    //전체를 할려면 html태그찾고 
+    </script>
 <!--bootstrap JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
