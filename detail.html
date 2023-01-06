@@ -15,51 +15,34 @@
   <link href="css/main2.css" rel="stylesheet">
 </head>
 <body>
-  <!-- tap 만들기-->
-  <style>
-    ul.list {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      border-bottom: 1px solid #ccc;
-    }
-    ul.list::after {
-      content: '';
-      display: block;
-      clear: both;
-    }
-    .tab-button {
-      display: block;
-      padding: 10px 20px 10px 20px;
-      float: left;
-      margin-right: -1px;
-      margin-bottom: -1px;
-      color: grey;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .orange {
-      border-top: 2px solid orange;
-      border-right: 1px solid #ccc;
-      border-bottom: 1px solid white;
-      border-left: 1px solid #ccc;
-      color: black;
-      margin-top: -2px;
-    }
-    .tab-content {
-      display: none;
-      padding: 10px;
-    }
-    .show {
-      display: block;
-    }
-  </style>
+  <div class="container mt-3">
+    <div class="card p-3">
+      <span class="name">상품명</span>
+      <span class="price">가격</span>
+    </div>
+  </div>
   
+  <script>
+    
+    // array배열 (순서O)
+    var car = ['소나타',50000,'white'];
+    //object자료형 이름붙여서 가능 (순서X) 
+    var car2={name:'소나타', price:5000}
+    var car3 = {name:'소나타', price: [50000, 30000, 40000]}
+    //          key           value
+
+    // 서버렌더링형식임 서버가 보내온 데이터형식을 html로 넣어주는것
+    //client-side rendering
+    //데이터바인딩 쉽게 해주는 jquery react,vue등
+    document.querySelector('.name').innerHTML = car2.name;
+    document.querySelector('.price').innerHTML = car2.price;
+  </script>
+  <!-- ! tap 만들기-->
   <div class="container mt-5">
     <ul class="list">
       <li class="tab-button " data-id="0">Products</li>
-      <li class="tab-button orange">Information</li>
-      <li class="tab-button">Shipping</li>
+      <li class="tab-button orange"data-id="1">Information</li>
+      <li class="tab-button"data-id="2">Shipping</li>
     </ul>
     <div class="tab-content">
       <p>상품설명입니다. Product</p>
