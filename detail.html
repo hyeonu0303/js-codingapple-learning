@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>detail.html</title>
   <!--jQuery라이브러리-->
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
@@ -21,22 +21,28 @@
       <span class="price">가격</span>
     </div>
   </div>
-  
-  <script>
-    
-    // array배열 (순서O)
-    var car = ['소나타',50000,'white'];
-    //object자료형 이름붙여서 가능 (순서X) 
-    var car2={name:'소나타', price:5000}
-    var car3 = {name:'소나타', price: [50000, 30000, 40000]}
-    //          key           value
 
-    // 서버렌더링형식임 서버가 보내온 데이터형식을 html로 넣어주는것
-    //client-side rendering
-    //데이터바인딩 쉽게 해주는 jquery react,vue등
-    document.querySelector('.name').innerHTML = car2.name;
-    document.querySelector('.price').innerHTML = car2.price;
-  </script>
+  <form class="container my-5 form-group">
+    <p>상품선택</p>
+    <select id="product" class="form-select mt-2">
+      <option>모자</option>
+      <option>셔츠</option>
+      <option>바지</option>
+    </select>
+    <select  class="form-select mt-2 form-hide">
+      <!-- ! 이런식으로 하드코딩하면안됨 자바스크립트로 html 생성해야함-->
+      <option>95</option>
+      <option>100</option>
+      <option>105</option>
+    </select>
+    <select  class="form-select mt-2 form-hide">
+    </select>
+  </form>
+  
+  <div id="test">
+    
+  </div>
+  <script src="detail.js"></script>
   <!-- ! tap 만들기-->
   <div class="container mt-5">
     <ul class="list">
@@ -54,8 +60,9 @@
       <p>배송정보입니다. Shipping</p>
     </div>
   </div> 
-
-  <script src="tab.js"></script>
+  <script src="tab.js">
+  </script>
+ 
 
   
     
