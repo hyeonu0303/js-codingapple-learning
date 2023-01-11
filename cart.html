@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--jQuery라이브러리-->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
+  </script>
+</head>
+<body>
+  <div class="bag">장바구니페이지</div>
+  <p></p>
+  <scirpt src="list.js"></scirpt>
+  <script>
+    
+    //장바구니에서 따와서 
+    var output = localStorage.getItem('cart');
+    var 상품명 = JSON.parse(output);
+    var count = 0;
+    $('p').html('');
+    for(let i=0; i<상품명.length; i++){
+      var product = `<p>${상품명[i]}</p>`
+      $('.bag').append(product);
+      // $('p').eq(i).html(상품명[i]);
+    }
+    
+    
+    
+    
+    
+  </script>
+</body>
+</html>

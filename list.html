@@ -23,96 +23,24 @@
           <p>가격 : 70000</p> 
           </div> -->
       </div>
-  </div> 
-  <div class="container">
-    <button class="btn btn-danger" id="more">더보기</button>
-  </div>
-  <script>
-    var products = [
-      { id : 0, price : 70000, title : 'Blossom Dress' },
-      { id : 1, price : 50000, title : 'Springfield Shirt' },
-      { id : 2, price : 60000, title : 'Black Monastery' }
-    ];
-
-    //상품목록 3개 만들기
-    var template = data => {
-      data.forEach((a,i)=>{
-        var 템플릿 = 
-          `<div class="col-sm-4">
-            <img src="https://via.placeholder.com/600" class="w-100">
-                <h5>${a.title}</h5>
-                <p>가격 : ${a.price}</p>
-            </div>`;
-          $('.row').append(템플릿);
-      });
-    }
-
-    let count = 0;
-      products.forEach((a, i)=>{
-        var 템플릿 = 
-        `<div class="col-sm-4">
-          <img src="https://via.placeholder.com/600" class="w-100">
-          <h5>${products[i].title}</h5>
-          <p>가격 : ${products[i].price}</p>
-        </div>`;
-        $('.row').append(템플릿)
-      });
-      //한개씩만나와야하는데 둘다 같이나옴
-      $('#more').on('click',() => {
-        if(count == 0) {
-          $.get('https://codingapple1.github.io/js/more1.json').done(data => {
-            template(data);
-          });
-          count++;
-          
-      }
-      })
       
-      $('#more').on('click',()=>{
-        if(count == 1){
-          $.get('https://codingapple1.github.io/js/more2.json').done(data => {
-            template(data);
-          });
-        }
-        count++;
-      })
-        //몇번 눌렀는지 체크
-            
-    
-    
+    </div> 
+
+    <div class="container my-3">
+      <button class="btn btn-danger" id="price">가격순정렬</button>
+    </div>
+    <div class="container my-3">
+      <button class="btn btn-danger" id="title">이름정렬</button>
+    </div>
+    <div class="container my-3">
+      <button class="btn btn-danger" id="price-6">6만원이하상품</button>
+    </div>
+    <div class="container">
+      <button class="btn btn-danger" id="more">더보기</button>
+    </div>
+  <script src="list.js">
+  </script>
   
-    
-    
-    
-    
-
-    // let 갯수 = products.length;
-    /* for(let i=0; i < 갯수; i++){
-      $('.card-title')[i].innerHTML = products[i].title;
-      $('.card-price')[i].innerHTML = products[i].price;
-    }  */
-
-    
-    //ajax 요청
-    /* $.get('https://codingapple1.github.io/hello.txt').done(data => {
-      console.log(data);
-    })
-    .fail(()=>{
-      console.log('실패함');
-    })
-
-    $.get('https://codingapple1.github.io/price.json').done(data => {
-      console.log(data.price);
-    }) */
-
-
-
-
-    //post 데이터보내고싶을때
-    /* $.post('https://codingapple1.github.io/hello.txt',{name:'kim'}).done((data) => {
-      console.log(data);
-    }) */
-  </script> 
 
   
     
