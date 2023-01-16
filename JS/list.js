@@ -175,7 +175,6 @@ $('#price-6').click(function(){
 })
 //------------------------------------------
 
-
 //* 상품추가 함수
 var template = data => {
   data.forEach((a,i)=>{
@@ -205,7 +204,7 @@ let count = 0;
       });
     }
   });
-      
+  
 // let 갯수 = products.length;
 /* for(let i=0; i < 갯수; i++){
   $('.card-title')[i].innerHTML = products[i].title;

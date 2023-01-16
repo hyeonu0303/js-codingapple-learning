@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,19 +9,45 @@
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
   </script>
-  <link href="CSS/card.css" rel="stylesheet">
+  <link href="/CSS/card.css" rel="stylesheet">
 </head>
 <body>
   <div class="card-background">
     <div class="card-box">
-      <img src="image/card1.png">
+      <img class="card" src="/image/card1.png" alt="card1">
     </div>
     <div class="card-box">
-      <img src="image/card2.png">
+      <img src="/image/card2.png">
     </div>
     <div class="card-box">
-      <img src="image/card3.png">
+      <img src="/image/card3.png">
     </div>
   </div>
+
+
+<script>
+  //420 = 1 969 = 0
+  $(window).scroll(()=>{
+    var 높이 = $(window).scrollTop();
+    console.log(높이);
+    var y = (-1/500) * 높이 + (115/50);
+    $('.card-box').eq(0).css('opacity',y);
+    if(높이 == 484){
+      $('.card').css('width', '0%');
+    }
+  });
+  //스크롤내리면 사진크기가 줄어듬
+
+
+  //650~1150까지 스크롤바를 내리면,
+  //첫째카드의 opacity 1~0으로 서서히 변경
+  /*
+  var y = a * 높이 + b; 1차함수 생각하면됨   
+  1 = a * 650 + b;
+  0 = a * 1150 + b; 
+  a = -1/500;
+  b = 115/50;
+  */
+</script>
 </body>
 </html>

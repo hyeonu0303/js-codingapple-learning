@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="quiz">
+    <h4>물에 빠지면 누구먼저 구할 것임?</h4>
+    <button>와이프</button>
+    <button>부모님</button>
+    <button>키운던 개</button>
+  </div>
+  
+  <script>
+   
+    document.querySelector('#quiz').addEventListener('click',(e)=>{
+      alert(e.target.innerHTML);
+    })
+  </script>
+</body>
+</html>
