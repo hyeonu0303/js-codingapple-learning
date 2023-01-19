@@ -1,0 +1,42 @@
+/*body백그라운드*/
+body {
+  width:100vw;
+  height:100vh;
+  margin: 0;
+  display:grid;
+  grid-template-rows: 4fr;
+  grid-template-rows: 60px 20px auto 100px;
+  background-color: rgb(218, 218, 218);
+  grid-template-areas: 
+    'nav'
+    'search'
+    'card'
+    'dragbar';
+}
+/** 가장큰 박스*/
+nav{
+  grid-area:nav;
+}
+
+#search{
+  grid-area:search;
+  margin: 10px;
+  padding-left:100px;
+}
+
+#card{
+  grid-area:card;
+  display:grid;
+  grid-template-columns: repeat(4, auto);
+  margin-left:110px;
+}
+
+#dargbar{
+  grid-area:dragbar;
+  background-color: black;
+}
+
+
+/**드래그바*/
+
+
