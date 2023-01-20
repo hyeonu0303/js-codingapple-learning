@@ -4,8 +4,8 @@ body {
   height:100vh;
   margin: 0;
   display:grid;
-  grid-template-rows: 4fr;
-  grid-template-rows: 60px 20px auto 100px;
+  
+  grid-template-rows: 60px 50px 450px 600px;
   background-color: rgb(218, 218, 218);
   grid-template-areas: 
     'nav'
@@ -24,19 +24,37 @@ nav{
   padding-left:100px;
 }
 
+
 #card{
   grid-area:card;
   display:grid;
   grid-template-columns: repeat(4, auto);
-  margin-left:110px;
+  grid-template-rows: auto;
+  margin: 0 110px;
+  grid-gap: 60px;
 }
 
-#dargbar{
+#dragbar{
   grid-area:dragbar;
   background-color: black;
+  margin: 40px 100px;
+  border-radius: 30px;
+  opacity: 0.8;
+}
+
+.inner-dragbar{
+  text-align:center;
+  margin: 30px 30px;
+  padding: 220px;
+  border-radius: 30px;
+  background-color: gray;
+  opacity: 1;
+  color:white;
+  font-size:30px;
 }
 
 
-/**드래그바*/
+
+
 
 

@@ -1,3 +1,20 @@
+var navtitle = `<div class="justify-content-start container-fluid">
+                  <div style="margin-left:10px">
+                  <span class="navbar-brand mb-0 h1 text-light">집꾸미기</span>
+                  </div>
+                  <div style="margin-left:10px">
+                    <span class="navbar-brand mb-0 fs-5 text-light">Home</span>
+                  </div>
+                  <div style="margin-left:10px">
+                    <span class="navbar-brand mb-0 fs-6 text-secondary">스토어</span>
+                  </div>
+                  <div style="margin-left:10px">
+                    <span class="navbar-brand mb-0 fs-6 text-secondary">시공견적</span>
+                  </div>
+                </div>`
+
+$('.navbar').append(navtitle);
+
 /*
 1. card에 쓸 데이터 json파일에서 가져오기
 2. card 템플릿만들기
@@ -32,4 +49,4 @@ $('input').click(()=>{
   $('input').val(''); 
 })
 //!검색기능
-
+//식기세척기면 식,기,세,척,기? 
